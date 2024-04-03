@@ -1,0 +1,7 @@
+<!-- -->
+<launch>
+  <rosparam file="$(find pcl_registration_tutorial)/../../../config/system.yaml" command="load"/>  
+  <node pkg="pcl_registration_tutorial" type="pcl_registration_tutorial" name="pcl_registration_tutorial" output="screen">
+
+  </node>
+</launch>

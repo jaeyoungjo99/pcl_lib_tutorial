@@ -1,0 +1,7 @@
+pcd_path:
+  pcd_source: resource/pcd/ioniq5_low_above_outside.pcd
+  pcd_target: resource/pcd/ioniq5_low_above_outside.pcd
+
+pcl_registration_tutorial:
+  registration_method: 0 # 0: ICP, 1: GICP
+

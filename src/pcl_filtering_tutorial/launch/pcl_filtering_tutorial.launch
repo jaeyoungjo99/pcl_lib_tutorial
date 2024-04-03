@@ -1,0 +1,7 @@
+<!-- -->
+<launch>
+  <rosparam file="$(find pcl_filtering_tutorial)/../../../config/system.yaml" command="load"/>  
+  <node pkg="pcl_filtering_tutorial" type="pcl_filtering_tutorial" name="pcl_filtering_tutorial" output="screen">
+
+  </node>
+</launch>
