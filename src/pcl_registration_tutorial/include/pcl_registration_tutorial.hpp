@@ -51,11 +51,16 @@
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/registration/icp.h>
 #include <pcl/registration/gicp.h>
+#include <pcl/registration/icp_nl.h>
+#include <pcl/features/normal_3d.h>
+#include <pcl/registration/ndt.h>
 
 enum EnumRegistrationMethod
 {
     ICP = 0,
-    GICP
+    ICP_NORMAL,
+    GICP,
+    NDT
 };
 
 class PclRegistrationTutorial{
@@ -70,7 +75,9 @@ class PclRegistrationTutorial{
     bool CheckParam();
 
     void IcpRegistration();
+    void IcpNormalRegistration();
     void GicpRegistration();
+    void NdtRegistration();
 
     void UpdatePointCloud();
 
@@ -103,6 +110,8 @@ class PclRegistrationTutorial{
     
     int cfg_i_registration_method_;
 
+    double cfg_d_target_voxel_m_;
+
     double cfg_d_target_move_x_m_;
     double cfg_d_target_move_y_m_;
     double cfg_d_target_move_z_m_;
@@ -111,4 +120,8 @@ class PclRegistrationTutorial{
     double cfg_d_target_rot_yaw_deg_;
 
     double cfg_d_max_search_distance_;
+    double cfg_d_transform_epsilon_;
+    int cfg_i_max_iteration_;
+
+    double cfg_d_ndt_voxel_size_m_;
 };

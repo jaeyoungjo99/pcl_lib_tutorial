@@ -137,7 +137,7 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 3
+      Size (Pixels): 4
       Size (m): 0.009999999776482582
       Style: Points
       Topic: /source_pcd_registered
@@ -172,8 +172,8 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz/Orbit
-      Distance: 8.983247756958008
+      Class: rviz/ThirdPersonFollower
+      Distance: 11.725789070129395
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -181,17 +181,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.955338180065155
-        Y: -0.87256920337677
-        Z: 0.494983434677124
+        X: 1.7983253002166748
+        Y: -1.6310242414474487
+        Z: 2.1510070382646518e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8197962045669556
+      Pitch: 0.9347975850105286
       Target Frame: <Fixed Frame>
-      Yaw: 1.2203936576843262
+      Yaw: 5.703579425811768
     Saved: ~
 Window Geometry:
   Displays:

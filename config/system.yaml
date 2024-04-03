@@ -1,10 +1,12 @@
 pcd_path:
-  pcd_source: resource/pcd/ioniq5_low_above_outside.pcd
+  pcd_source: resource/pcd/ioniq5_low_above_outside_cut_2_ds.pcd
   pcd_target: resource/pcd/ioniq5_low_above_outside.pcd
 
 pcl_registration_tutorial:
-  registration_method: 1 # 0: ICP, 1: GICP
-  target_move_x_m: 0.5
+  target_voxel_m: 0.1
+
+  registration_method: 2 # 0: ICP, 1: ICP Normal, 2: GICP, 3: NDT
+  target_move_x_m: 0.2
   target_move_y_m: 0.0
   target_move_z_m: 0.0
   target_rot_roll_deg: 0.0
@@ -13,4 +15,9 @@ pcl_registration_tutorial:
 
   # ICP
   max_search_distance: 1.0
+  transform_epsilone: 0.01
+  max_iteration: 100
+
+  # NDT
+  ndt_voxel_size_m: 1.0
 
