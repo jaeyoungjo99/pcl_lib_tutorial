@@ -49,6 +49,8 @@
 #include <pcl/features/normal_3d.h>
 #include <pcl/filters/extract_indices.h>
 #include <pcl/filters/voxel_grid.h>
+#include <pcl/registration/icp.h>
+#include <pcl/registration/gicp.h>
 
 enum EnumRegistrationMethod
 {
@@ -77,13 +79,20 @@ class PclRegistrationTutorial{
     ros::Publisher p_pcd_source_origin_;
     ros::Publisher p_pcd_target_origin_;
 
+    ros::Publisher p_pcd_source_registered_;
+
     sensor_msgs::PointCloud2 o_pcd_source_origin_msg_;
     sensor_msgs::PointCloud2 o_pcd_target_origin_msg_;
+
+    sensor_msgs::PointCloud2 o_pcd_source_registered_msg_;
+
 
     private: // 내부 자료
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr pcd_source_pcptr_;
     pcl::PointCloud<pcl::PointXYZ>::Ptr pcd_target_pcptr_;
+
+    pcl::PointCloud<pcl::PointXYZ>::Ptr pcd_source_registered_pcptr_;
 
     private: // 설정값
 
@@ -91,7 +100,15 @@ class PclRegistrationTutorial{
 
     std::string cfg_str_pcd_source_path_;
     std::string cfg_str_pcd_target_path_;
+    
     int cfg_i_registration_method_;
 
+    double cfg_d_target_move_x_m_;
+    double cfg_d_target_move_y_m_;
+    double cfg_d_target_move_z_m_;
+    double cfg_d_target_rot_roll_deg_;
+    double cfg_d_target_rot_pitch_deg_;
+    double cfg_d_target_rot_yaw_deg_;
 
+    double cfg_d_max_search_distance_;
 };

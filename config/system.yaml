@@ -3,5 +3,14 @@ pcd_path:
   pcd_target: resource/pcd/ioniq5_low_above_outside.pcd
 
 pcl_registration_tutorial:
-  registration_method: 0 # 0: ICP, 1: GICP
+  registration_method: 1 # 0: ICP, 1: GICP
+  target_move_x_m: 0.5
+  target_move_y_m: 0.0
+  target_move_z_m: 0.0
+  target_rot_roll_deg: 0.0
+  target_rot_pitch_deg: 0.0
+  target_rot_yaw_deg: 5.0
+
+  # ICP
+  max_search_distance: 1.0
 
