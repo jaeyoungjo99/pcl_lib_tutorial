@@ -5,7 +5,7 @@ pcd_path:
 pcl_registration_tutorial:
   target_voxel_m: 0.1
 
-  registration_method: 2 # 0: ICP, 1: ICP Normal, 2: GICP, 3: NDT
+  registration_method: 2 # 0: ICP, 1: ICP Normal, 2: GICP, 3: NDT, 4: POINT_TO_POINT_HW, POINT_TO_PLANE_HW, GICP_HW
   target_move_x_m: 0.2
   target_move_y_m: 0.0
   target_move_z_m: 0.0

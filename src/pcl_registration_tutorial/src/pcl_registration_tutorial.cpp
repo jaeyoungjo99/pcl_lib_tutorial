@@ -130,6 +130,19 @@ void PclRegistrationTutorial::Run()
             NdtRegistration();
             break;
 
+        // 2024/05/01 Homework!
+        case EnumRegistrationMethod::POINT_TO_POINT_HW:
+            PointToPointHw();
+            break;
+
+        case EnumRegistrationMethod::POINT_TO_PLANE_HW:
+            PointToPlaneHw();
+            break;
+
+        case EnumRegistrationMethod::GICP_HW:
+            GicpHw();
+            break;
+
         default:
             ROS_WARN("No Matching Method! %d", cfg_i_registration_method_);
             return;
@@ -225,6 +238,65 @@ void PclRegistrationTutorial::NdtRegistration()
     ROS_INFO("[NdtRegistration]  %f (ms)", std::chrono::duration_cast<std::chrono::microseconds>(icp_end - icp_start).count()/1000.0);
 
 }
+
+// 2024/05/01 Homework
+void PclRegistrationTutorial::PointToPointHw()
+{
+    ROS_INFO("Run PointToPointHw Started");
+    auto icp_start = std::chrono::steady_clock::now();
+
+    // TODO
+
+    // 0. Make iteration
+
+    // 1. Point to Point association between pcd_source_pcptr_, pcd_target_pcptr_
+
+    // 2. levenberg marquardt optimization
+
+
+
+    auto icp_end = std::chrono::steady_clock::now();
+    ROS_INFO("[PointToPointHw]  %f (ms)", std::chrono::duration_cast<std::chrono::microseconds>(icp_end - icp_start).count()/1000.0);
+}
+
+void PclRegistrationTutorial::PointToPlaneHw()
+{
+    ROS_INFO("Run PointToPlaneHw Started");
+    auto icp_start = std::chrono::steady_clock::now();
+
+    // TODO
+
+    // 0. Make iteration
+
+    // 1. Point to Plane association between pcd_source_pcptr_, pcd_target_pcptr_
+
+    // 2. levenberg marquardt optimization
+    
+
+    auto icp_end = std::chrono::steady_clock::now();
+    ROS_INFO("[PointToPlaneHw]  %f (ms)", std::chrono::duration_cast<std::chrono::microseconds>(icp_end - icp_start).count()/1000.0);
+}
+
+void PclRegistrationTutorial::GicpHw()
+{
+    ROS_INFO("Run GicpHw Started");
+    auto icp_start = std::chrono::steady_clock::now();
+
+    // TODO
+
+    // 0. Make iteration
+
+    // 1. Point to Point association between pcd_source_pcptr_, pcd_target_pcptr_
+
+    // 2. Calculate rotation of normal vector of source and target points
+
+    // 3. levenberg marquardt optimization
+    
+
+    auto icp_end = std::chrono::steady_clock::now();
+    ROS_INFO("[GicpHw]  %f (ms)", std::chrono::duration_cast<std::chrono::microseconds>(icp_end - icp_start).count()/1000.0);
+}
+
 
 void PclRegistrationTutorial::UpdatePointCloud()
 {

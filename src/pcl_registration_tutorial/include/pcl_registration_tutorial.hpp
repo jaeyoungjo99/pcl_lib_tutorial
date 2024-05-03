@@ -23,6 +23,7 @@
 #include <boost/filesystem.hpp>
 
 // PCL
+#include <pcl/common/eigen.h>
 #include <pcl/point_types.h>
 #include <pcl/point_cloud.h>
 #include <pcl/common/common_headers.h>
@@ -60,7 +61,10 @@ enum EnumRegistrationMethod
     ICP = 0,
     ICP_NORMAL,
     GICP,
-    NDT
+    NDT,
+    POINT_TO_POINT_HW,
+    POINT_TO_PLANE_HW,
+    GICP_HW
 };
 
 class PclRegistrationTutorial{
@@ -78,6 +82,10 @@ class PclRegistrationTutorial{
     void IcpNormalRegistration();
     void GicpRegistration();
     void NdtRegistration();
+
+    void PointToPointHw();
+    void PointToPlaneHw();
+    void GicpHw();
 
     void UpdatePointCloud();
 
