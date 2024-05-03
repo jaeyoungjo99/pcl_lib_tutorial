@@ -56,6 +56,11 @@
 #include <pcl/features/normal_3d.h>
 #include <pcl/registration/ndt.h>
 
+// OpenCV
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
 enum EnumRegistrationMethod
 {
     ICP = 0,
